@@ -1,29 +1,29 @@
-title:            My Name is Toomee
-description:      DMD, Science, and Technology Stuff
-disqus_shortname: none 
-reading_time:     false
+title:            Site Title
+description:      Describe your website here.
+disqus_shortname: hpstrtheme
+reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url: caskethopper.github.io
+url:
 
 # Owner/author information
 owner:
-  name:           Chad
+  name:           Your Name
   avatar:         avatar.jpg
-  bio:            "Just another parent"
-  email:          chad.campbell@toomee.org
+  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  email:          you@email.com
   # Social networking links used in footer. Update and remove as you like.
-  #twitter:        
-  #facebook:       
-  #github:         
-  #stackexchange:  
-  #linkedin:       
-  #instagram:      
-  #flickr:         
-  #tumblr:         
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  #google_plus:    
+  google_plus:    +yourid
 
 # Background image to be tiled on all pages
 background: 
