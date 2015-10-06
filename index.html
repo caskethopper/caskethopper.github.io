@@ -1,34 +1,76 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Caskethopper.GitHub.io by caskethopper</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Caskethopper.GitHub.io</h1>
-      <h2 class="project-tagline">Landing spot for Toomee.org</h2>
-    </section>
+---
+layout: post-index
+title: Latest Posts
+description: "Describe this nonsense."
+tags: [Jekyll, theme, themes, responsive, blog, modern]
+comments: false
+image:
+  feature: abstract-1.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+---
 
-    <section class="main-content">
-      <p>Your Honor, I have no closing statement because I’m throwing the case.  No, no, it’s OK, it's fine, don’t worry.  My client, Shirley Bennett, my friend of three years, she told me that it was OK, she said what I want was more important.  She’s right, right?  I mean, guys like me we’ll tell you there’s no right or wrong, there’s no real truths, and as long as well all believe that guys like me can never lose.  Because the truth is, I’m lying when I say there is no truth.  The truth is, the pathetically stupidly inconveniently obvious truth is, helping only ourselves is bad and helping each other is good.  Now, I just wanted to get out of here, pass Biology and be a lawyer again instead of helping Shirley: that was bad.  And my former colleague wanted so badly keep his rich client that he just asked me to roll over in exchange for my old job.  So, I guess we all walked in here pretty bad.  But now Shirley’s gone good, Shirley’s helping me.  It’s that easy.  You just stop thinking about what’s good for you and start thinking about what’s good for someone else, and you can change the whole game, with one move.  Now if you like this idea, you can make it true by doing something good for everyone here.  Throw this case out of court, it’s dumb.  That is all.</p>
+{% for post in paginator.posts %}
+<article class="hentry">
+  <header>
+    {% if post.image.feature %}
+      <div class="entry-image-index">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+      </div><!-- /.entry-image -->
+    {% endif %}
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
+      {% if site.reading_time %}
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        {% assign readtime = post.content | number_of_words | divided_by:site.words_per_minute %}
+        Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
+      </span><!-- /.entry-reading-time -->
+      {% endif %}
+    </div><!-- /.entry-meta -->
+    {% if post.link %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
+    {% else %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+    {% endif %}
+  </header>
+  <div class="entry-content">
+    {{ post.content }}
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+{% endfor %}
 
-<p>I'm sorry, you should take some credit for who I've become...so, let me tell you how I turned out, just so you're crystal clear on your impact.  I'm not well adjusted, and more often than not, I am barely keeping it together.  I'm constantly texting, and there's no one on the other end.  I'm just a grown man who can't even look his own friends in the eye for too long because I'm afraid that they'll see that I am broken, so you get credit for that....One time when I was in seventh grade I told everyone at school that I had appendicitis.  I wanted someone to worry about me, but when Beth Brennan asked to see the scar, I didn't want to get found out so I took mom's scissors and I made one.  It hurt like Hell.  But it was worth it because I got 17 cards and I still keep them in a box underneath my bed 22 years later because it proves that someone at some point cared about me.  You wanna see the scar?  So, you get credit for that too.  This is me.</p>
-
-<p>I wish I had the courage to commit to a bit like you 'Abed' or to a relationship like Troy.  Committing is hard cause we are all scared of what happens when we find out we committed to the wrong thing...but there's no shame in what Troy's done.  He put himself out there and he really tried and that proves he cares.  That said, and as hard as it may seem right now, Troy needs to show he cares.  He needs to put himself out there and own how he feels.  That proves he's a man.</p>
-
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
-</html>
+<div class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <a href="{{ site.url }}" class="btn">Previous</a>
+    {% else %}
+      <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="btn">Previous</a>
+    {% endif %}
+  {% else %}
+    Previous
+  {% endif %}
+  <ul class="inline-list">
+    <li>
+      {% if paginator.page == 1 %}
+        <span class="current-page">1</span>
+      {% else %}
+        <a href="{{ site.url }}">1</a>
+      {% endif %}
+    </li>
+    {% for count in (2..paginator.total_pages) %}
+      <li>
+        {% if count == paginator.page %}
+          <span class="current-page">{{ count }}</span>
+        {% else %}
+          <a href="{{ site.url }}/page{{ count }}">{{ count }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% if paginator.next_page %}
+    <a href="{{ site.url }}/page{{ paginator.next_page }}" class="btn">Next</a>
+  {% else %}
+    Next
+  {% endif %}
+</div><!-- /.pagination -->
