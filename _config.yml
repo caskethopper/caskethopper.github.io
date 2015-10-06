@@ -1,6 +1,6 @@
 title:            My Name is Toomee
 description:      DMD, Science, and Technology Stuff
-disqus_shortname: 
+disqus_shortname: none 
 reading_time:     false
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
@@ -14,16 +14,16 @@ owner:
   bio:            "Just another parent"
   email:          chad.campbell@toomee.org
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
+  #twitter:        
+  #facebook:       
+  #github:         
+  #stackexchange:  
+  #linkedin:       
+  #instagram:      
+  #flickr:         
+  #tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus:    
+  #google_plus:    
 
 # Background image to be tiled on all pages
 background: 
