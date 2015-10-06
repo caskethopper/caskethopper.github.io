@@ -1,5 +1,5 @@
 title:            My Name is Toomee
-description:      DMD and Stuff (and Things)
+description:      Stuff, and Things
 disqus_shortname: none
 reading_time:     false
 words_per_minute: 200
@@ -11,7 +11,7 @@ url:              //caskethopper.github.io
 owner:
   name:           Chad
   avatar:         avatar.jpg
-  bio:            "This is a site about a kid and a disease, as documented by a dad (mostly)."
+  bio:            "This is a site about a kid and a disease, documented by a dad (mostly)."
   email:          you@email.com
   # Social networking links used in footer. Update and remove as you like.
   #twitter:        
