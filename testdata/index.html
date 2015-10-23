@@ -3,9 +3,8 @@ layout: page
 title: ""
 ---
 <ul>
-{% for item in site.data.test %}
   <li>
-    <p> {{ item.results }} </p>
+    {% assign result = site.data.test %}
+    {{ result.overall_status }}
   </li>
-{% endfor %}
 </ul>
