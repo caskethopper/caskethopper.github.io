@@ -1,10 +1,10 @@
 ---
 layout: page
-title: ""
+title: "test"
 ---
 <ul>
-  <li>
-    {% assign result = site.data.test %}
-    {{ result.overall_status }}
-  </li>
+    {% assign result = site.data[page.title] %}
+    <p>{{ result.overall_status }} </p>
+    <p>{{ result.detailed_description.textblock }} </p>
+ 
 </ul>
