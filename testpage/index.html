@@ -2,10 +2,10 @@
 layout: page
 title: "i'm testing stuff"
 ---
+
 <ul>
-{% for key,val in site.data.test %}
+{% for element in site.data.test %}
   <li>
-    <p>{{key}} {{val}}</p>
+    <p> {{ element.results }} </p>
   </li>
-{% endfor %}
 </ul>
