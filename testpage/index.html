@@ -2,5 +2,10 @@
 layout: page
 title: "i'm testing stuff"
 ---
-
-Ok, this is a test page
+<ul>
+{% for key,val in site.data.test %}
+  <li>
+    <p>{{key}} {{val}}</p>
+  </li>
+{% endfor %}
+</ul>
