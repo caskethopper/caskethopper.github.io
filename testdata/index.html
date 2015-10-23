@@ -6,5 +6,11 @@ title: "test"
     {% assign result = site.data[page.title] %}
     <p>{{ result.overall_status }} </p>
     <p>{{ result.detailed_description.textblock }} </p>
- 
+    <p> Title: {{ result.official_title }} </p>
+    <p> URL:   {{ result.required_header.url }} </p>
+    <p> Start: {{ result.start_date }} </p>
+    <p> Completion: {{ result.completion_date.value }} </p>
+    {% for treatment in result.intervention %} 
+    <p> Intervention: {{ treatment.intervention_name }} </p>
+    {% endfor %}
 </ul>
