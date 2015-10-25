@@ -1,3 +1,4 @@
+---
 title: "Josquin: Missa De beata virgine and Missa Ave maris stella"
 artist: "The Tallis Scholars"
 director: "Peter Phillips"
@@ -15,3 +16,4 @@ works:
         duration: "7:47"
       - title: "Agnus Dei I, II & III"
         duration: "6:49"
+---
