@@ -53,7 +53,7 @@ paginate: 5
 
 #testing collections
 collections:
-  clinicals
+  - clinicals
 #    output: true
 
 # Build settings
