@@ -51,5 +51,9 @@ paginate: 5
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
+#testing collections
+collections:
+- clinical_trials
+
 # Build settings
 #markdown: kramdown
