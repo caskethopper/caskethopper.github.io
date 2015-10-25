@@ -2,10 +2,11 @@
 layout: page
 title: ""
 ---
-{% for trial in site.clinicals %}
+<ul>
+  {% for trial in site.clinicals %}
 
-<p> {{ trial.title }}</p>
-<p> {{ trial.artist }}</p>
+    <p> {{ trial.title }}</p>
+    <p> {{ trial.artist }}</p>
 
-{% endfor %}
-
+  {% endfor %}
+</ul>
