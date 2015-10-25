@@ -53,7 +53,7 @@ paginate: 5
 
 #testing collections
 collections:
-- clinical_trials
+  - clinical_trials
 
 # Build settings
 #markdown: kramdown
