@@ -53,8 +53,8 @@ paginate: 5
 
 #testing collections
 collections:
-  clinicals:
-    output: true
+  clinicals
+#    output: true
 
 # Build settings
 #markdown: kramdown
